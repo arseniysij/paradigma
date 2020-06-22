@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 $(function() {
 	let map = $('.location-map').hide();
-	let link = $('.location-text__map-link').hover(function(){
+	let link = $('.location-text').hover(function(){
 		$(map).fadeIn(150);
 	}, function() {
-		if ($(map, link).mouseout(function(){
+		if (map.mouseout) {
 			$(map).fadeOut(200);
-		}));
+		}
 	});
 
 	var rellax = new Rellax('.rellax');

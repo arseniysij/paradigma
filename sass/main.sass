@@ -98,7 +98,7 @@ ul
 	
 .header
 	position: relative
-	z-index: 5
+	z-index: 60
 
 .header__container
 	display: flex
@@ -132,6 +132,7 @@ ul
 
 .location-text
 	font-size: 0.8vw	
+	cursor: pointer
 
 .location-text__header
 	font-weight: 700
@@ -151,7 +152,6 @@ ul
 	font-weight: 500
 	letter-spacing: 0.0625vw
 	text-transform: uppercase
-	cursor: pointer
 	transition: all 0.4s;
 	&:before
 		content: ""
@@ -162,13 +162,14 @@ ul
 		border-bottom: 1px dashed $accent
 		transform: translateX(-50%);
 		transition: all 0.4s;
-	&:hover:before
-		width: 50%
+	// &:hover:before
+	// 	width: 50%
 
 .location-map
 	position: absolute
 	width: 21vw
 	height: 17vw	
+	// padding-top: vw(20)
 	box-shadow: 3px 0 13px rgba(211, 211, 211, 0.11)
 	transform: translateX(-25%);
 	z-index: 100
