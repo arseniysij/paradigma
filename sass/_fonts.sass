@@ -10,6 +10,30 @@
 // 900 Extra Black or Fat or Ultra Black
 
 
+// 8 = 0.4166vw
+// 7 = 0.3645vw
+// 62 = 3.2291vw
+
+	
+$fvw-5: 0.2604vw
+$fvw-10: 0.520vw
+$fvw-12: 0.625vw
+$fvw-14: 0.7291vw
+$fvw-15: 0.78125vw
+$fvw-16: 0.833vw
+$fvw-18: 0.9375vw
+$fvw-20: 1.0416vw
+$fvw-21: 1.09375vw
+$fvw-23: 1.1979vw
+$fvw-24: 1.25vw
+$fvw-25: 1.3020vw
+$fvw-30: 1.5625vw
+$fvw-36: 1.8751vw
+$fvw-48: 2.5vw
+$fvw-55: 2.8645vw
+$fvw-60: 3.125vw
+
+
 @mixin font($f-name, $f-style, $f-weight, $f-url)
 	@font-face
 		font-family: $f-name
@@ -17,11 +41,11 @@
 		font-weight: $f-weight
 		src: url($f-url) format('woff2')
 
-
-@include font('MuseoSansCyrl', normal, 300, '../fonts/MuseoSansCyrl-300.woff')
-@include font('MuseoSansCyrl', normal, 500, '../fonts/MuseoSansCyrl-500.woff')
-@include font('MuseoSansCyrl', normal, 700, '../fonts/MuseoSansCyrl-700.woff')
 @include font('MuseoSansCyrl', normal, 300, '../fonts/MuseoSansCyrl-300.woff2')
 @include font('MuseoSansCyrl', normal, 500, '../fonts/MuseoSansCyrl-500.woff2')
 @include font('MuseoSansCyrl', normal, 700, '../fonts/MuseoSansCyrl-700.woff2')
+@include font('MuseoSansCyrl', normal, 300, '../fonts/MuseoSansCyrl-300.woff')
+@include font('MuseoSansCyrl', normal, 500, '../fonts/MuseoSansCyrl-500.woff')
+@include font('MuseoSansCyrl', normal, 700, '../fonts/MuseoSansCyrl-700.woff')
+
 

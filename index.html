@@ -4,18 +4,173 @@
 <head>
 	<meta charset="utf-8">
 	<title>Pincet | Студия депиляции</title>
-	<meta name="description" content="Pincet | Студия депиляции">
+	<meta name="description" content="Студия депиляции и массажный кабинет в Бресте">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.png">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/styles.min.css">
 
 </head>
 
 <body>
-	
-	
+
+	<div class="main-bg">
+		<header class="header">
+			<div class="container header__container">
+				<div class="logo">
+					<a class="logo__img" href="index.html">
+						<picture>
+							<source srcset="img/webp@2x/logo.webp" type="image/webp">
+							<img src="img/@2x/logo.png" alt="Логотип студии депиляции PINCET">
+						</picture>
+					</a>
+					<h1 class="logo__text">
+						Студия депиляции и<br>массажный кабинет<br>в Бресте
+					</h1>
+
+				</div>
+				<div class="location">
+					<div class="location-icon">
+						<img src="img/@2x/map-icon.png" alt="">
+					</div>
+					<div class="location-text">
+						<p class="location-text__header">Мы находимся в центре:</p>
+						<p class="location-text__address">г. Брест, ул. Гоголя, д.65</p>
+						<p class="location-text__map-link">Смотреть на карте</p>
+						<div class="location-map">
+							<div style="position:relative;overflow:hidden;width:100%;height:100%;"><a
+									href="https://yandex.ru/maps/org/pincet/197289997372/?utm_medium=mapframe&utm_source=maps"
+									style="color:#eee;font-size:12px;position:absolute;top:0px;">Pincet</a><a
+									href="https://yandex.ru/maps/153/brest/category/sugaring/?utm_medium=mapframe&utm_source=maps"
+									style="color:#eee;font-size:12px;position:absolute;top:14px;">Шугаринг в
+									Бресте</a><a
+									href="https://yandex.ru/maps/153/brest/category/cosmetology/?utm_medium=mapframe&utm_source=maps"
+									style="color:#eee;font-size:12px;position:absolute;top:28px;">Косметология в
+									Бресте</a><iframe src="https://yandex.ru/map-widget/v1/-/CCQhaTBISB" width="100%"
+									height="100%" frameborder="0" allowfullscreen="true"
+									style="position:relative;"></iframe></div>
+						</div>
+					</div>
+				</div>
+				<div class="phones">
+					<div class="phones__number">
+						<a class="call-icon" href="tel:+375 33 382 24 99">
+							<img src="img/@2x/call.png" alt="">
+						</a>
+						<div class="phones-text">
+							<p class="phones-text__call-us">Звоните, мы сейчас работаем</p>
+							<a class="phones-text__phone-numb" href="tel:+375333822499">+375 33 382 24 99</a>
+						</div>
+					</div>
+					<div class="phones-schedule">
+						<div class="phones-schedule__time-icon">
+							<img src="img/@2x/clock.png" alt="">
+						</div>
+						<div class="phones-schedule__text"><span>Пн-Вс</span> 9:00-21:00</div>
+					</div>
+				</div>
+				<div class="signup" id="signup">
+					<img src="img/@2x/calendar.png" alt="">
+					<p class="signup__text">Записаться онлайн</p>
+				</div>
+			</div>
+
+			<nav class="navigation">
+				<div class="container">
+					<ul class="nav">
+						<li class="current-menu-item"><a class="" href="">Главная</a</li> <li><a href="">Шугаринг и
+									депиляция воском</a></li>
+						<li><a href="">Классический массаж</a></li>
+						<li><a href="">Антицеллюлитный массаж</a> </li>
+						<li><a href="">Обучение</a></li>
+						<li><a href="">Косметика для мастеров</a></li>
+						<li><a href="">Статьи</a></li>
+						<li><a href="">О студии</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div class="hero-wrap">
+			<div class="container">
+				<div class="hero">
+					<h2 class="hero__title">Хотите избавиться от<br>
+						<span>нежелательных волос</span><br>
+						или нужен сеанс<br>
+						<span>антицеллюлитного массажа?</span>
+					</h2>
+					<div class="hero__content">
+						<div class="hero__bullets">
+							<div class="bullet-item">
+								<i class="bullet-icon"></i>
+								<p class="">депиляция воском и Шугаринг;</p>
+							</div>
+							<div class="bullet-item">
+								<i class="bullet-icon"></i>
+								<p class="">профессиональные сертифицированные мастера;</p>
+							</div>
+							<div class="bullet-item">
+								<i class="bullet-icon"></i>
+								<p class="">работаем и с женщинами, и с мужчинами;</p>
+							</div>
+							<div class="bullet-item">
+								<i class="bullet-icon"></i>
+								<p class="">результат уже после первой процедуры.</p>
+							</div>
+						</div>
+						<a class="btn hero__btn" id="hero__btn">
+							<span>получить карту<br>
+								клиента</span>
+							<img class="btn-dec" src="img/@2x/branch.png" alt="">
+						</a>
+						<div class="hero__info">
+							<img src="img/@2x/info.png" alt="">
+							<div class="info-hint">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="arrow-down">
+			<img src="img/@2x/down.png" alt="">
+		</div>
+		<div class="heart-left rellax" data-rellax-speed="3">
+			<img src="img/@2x/heart-left.png" alt="">
+		</div>
+		<div class="heart-right rellax" data-rellax-speed="15">
+			<img src="img/@2x/heart-right.png" alt="">
+		</div>
+		<div class="popup" id="popup">
+			<h3 class="popup__title"><span>Получите</span> программу обучения</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+				magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
+			<form action="" method="post">
+				<select class="popup__select" name="reason" id="reason">
+					<option value="Повышение квалификации">Повышение квалификации</option>
+					<option value="Повышение квалификации">Повышение квалификации</option>
+					<option value="Повышение квалификации">Повышение квалификации</option>
+				</select>
+				<input name="name" type="text" placeholder="Ваше имя">
+				<input name="phone" type="tel" placeholder="Ваш номер телефона">
+				<div class="submit-wrap">
+					<input class="popup__submit btn hero__btn" type="submit" value="Получить программу">
+					<img src="img/@2x/flower.png" alt="">
+				</div>
+				
+			</form>
+			<div class="popup-close"></div>
+		</div>
+		
+	</div>
+
+
 
 	<script src="js/scripts.min.js"></script>
 
 </body>
+
 </html>
