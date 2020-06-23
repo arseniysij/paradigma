@@ -5,8 +5,10 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 $(function() {
-	let map = $('.location-map').hide();
-	let link = $('.location-text').hover(function(){
+	let map = $('.location-map');
+	let link = $('.location-text');
+	map.hide();
+	link.hover(function(){
 		$(map).fadeIn(150);
 	}, function() {
 		if (map.mouseout) {
