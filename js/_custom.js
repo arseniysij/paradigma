@@ -20,6 +20,8 @@ $(function() {
 
 	$('.popup__select').select2({
 		minimumResultsForSearch: -1, 
+		dropdownAutoWidth : true,
+  	 	width: '100%',
 	});
 
 	// popup
@@ -27,7 +29,11 @@ $(function() {
 	let signUpBtn = $('#signup');
 	let clientCardBtn = $('#hero__btn');
 	let popupClose = $('.popup-close');
+	let submitBtn = $('.popup__submit');
+	let popupComplete = $('.popup-complete');
+	let popupCompleteClose = $('.complete-close')
 	popup.hide();
+	popupComplete.hide();
 	$(signUpBtn).click(function(){
 		popup.fadeIn(200);
 		return false;
@@ -46,5 +52,40 @@ $(function() {
     $(popup).fadeOut(200);
   }        
 });
+$(document).click(function(event) { 
+  $target = $(event.target);
+  if(!$target.closest(popupComplete).length && 
+  $(popupComplete).is(":visible")) {
+    $(popupComplete).fadeOut(200);
+  }        
+});
+	submitBtn.click(function() {
+		popup.fadeOut(400);
+		popupComplete.delay(300).fadeIn(200);
+		popupCompleteClose.click(function() {
+		popupComplete.fadeOut(200);
+		});
+	});
+		
+	// menu btn
+// 	document.querySelector('.menu-toggler').onclick = function() {
+//   document.querySelector('.menu-btn').classList.toggle('menu-btn__active');
+
+	// mob-nav
+	let menuToggler = $('.menu-toggler');
+	let menuBtn = $('.menu-btn');
+	let navigation = $('.navigation');
+	$(menuToggler).click(function() {
+		if (!menuBtn.hasClass('active')) {
+			menuBtn.addClass('active');
+			navigation.fadeIn(300);
+		} else if (menuBtn.hasClass('active')) {
+			menuBtn.removeClass('active');
+			navigation.fadeOut(300);
+		}
+	
+		
+	});
+
 	
 });

@@ -96,19 +96,22 @@ ul
 
 .main-bg
 	position: relative
-	background-image: url(../img/@2x/main-bg.png)
-	width: 100%
+	background: url(../img/@2x/main-bg.png) top center
+	width: 100vw
 	min-height: 55vw
 	background-size: cover
 	overflow-x: hidden
 	z-index: 0
 	+media-breakpoint-down(md)
 		min-height: 54.4rem
+		background-image: url(../img/@2x/hero-bg-lg.png)
 
 	
 .header
 	position: relative
 	z-index: 60
+	+media-breakpoint-down(md)
+		margin-bottom: 4rem
 
 .header__container
 	display: flex
@@ -142,6 +145,7 @@ ul
 	font-weight: 300
 	letter-spacing: 0.0364583vw
 	+media-breakpoint-down(md)
+		display: none
 		margin-bottom: .4rem
 		font-size: 1rem
 
@@ -305,31 +309,37 @@ ul
 			height: 1.2rem
 
 .phones-schedule__text
-	font-size: $fvw-16
-	line-height: $fvw-21
+	font-size: vw(16)
+	line-height: vw(21)
 	font-weight: 700
-	letter-spacing: 0.0416666666666667vw
+	letter-spacing: vw(0.8)
 	+media-breakpoint-down(md)
 		font-size: 1rem
 		line-height: 1.2rem
+		letter-spacing: .08rem
 	span
 		font-weight: 300
 
 .signup
 	display: flex
 	align-items: center
-	padding: $fvw-25
+	padding: vw(25)
 	background-color: #fefcfb
-	border-radius: $fvw-30
+	border-radius: vw(30)
 	cursor: pointer
 	transition: all .3s 
-	box-shadow: 0 4px 5px rgba(68, 68, 68, 0.11)
+	box-shadow: 0 vw(4) vw(5) rgba(68, 68, 68, 0.11)
 	+media-breakpoint-down(md)
+		display: none
 		padding: 1.5rem
 		border-radius: 1.5rem
+		box-shadow: 0 .4rem .5rem rgba(68, 68, 68, 0.11)
 	&:hover
-		box-shadow: 0 4px 5px rgba($accent, 0.6)
+		box-shadow: 0 .4rem .5rem rgba($accent, 0.6)
 		transition: all .3s 
+		transform: rotateX(20deg)
+		+media-breakpoint-down(md)
+			box-shadow: 0 .4rem .5rem rgba($accent, 0.6)
 
 .signup img
 	margin-right: $fvw-10
@@ -352,6 +362,11 @@ ul
 		font-size: 1rem
 		letter-spacing: .075rem
 
+.navigation
+	+media-breakpoint-down(md)
+		display: none
+
+
 .nav
 	position: relative
 	display: flex
@@ -363,7 +378,6 @@ ul
 	border-radius: vw(5)
 	z-index: 1
 	+media-breakpoint-down(md)
-		// display: none
 		margin: 0
 		border-radius: .5rem
 
@@ -381,8 +395,7 @@ ul
 		+media-breakpoint-down(md)
 			display: none
 
-.nav.active
-	display: block		
+	
 
 .nav li
 		
@@ -419,24 +432,33 @@ ul
 		margin-left: 6rem
 
 .hero__title
-	margin-bottom: $fvw-60
-	font-size: $fvw-48	
-	line-height: $fvw-55
+	margin-bottom: vw(60)
+	font-size: vw(48)	
+	line-height: vw(55)
 	font-weight: 300
+	+media-breakpoint-down(md)
+		font-size: 2.5rem
+		line-height: 2.8rem
 
 .hero__title span	
 	font-weight: 700
 
 .hero__bullets
 	margin-bottom: 3.2291vw
+	+media-breakpoint-down(md)
+		margin-bottom: 3.2rem
 
 .bullet-item
 	display: flex
 	align-items: center
-	font-size: $fvw-18
+	font-size: vw(18)
 	line-height: 1.8751vw
 	font-weight: 300
 	letter-spacing: 0.0234375vw
+	+media-breakpoint-down(md)
+		font-size: 1.2rem
+		line-height: 1.8rem
+		letter-spacing: .023rem
 
 .bullet-icon
 	display: block
@@ -444,40 +466,70 @@ ul
 	margin-left: 0.3645vw
 	width: 0.88541vw
 	height: 0.88541vw
-	border: 4px solid #f7f7fb
+	border: vw(4) solid #f7f7fb
 	border-radius: 50%
 	background-color: #ef9499
-	box-shadow: 0 1px 13px rgba(239, 148, 153, 0.38)
+	box-shadow: 0 vw(1) vw(13) rgba(239, 148, 153, 0.38)
+	+media-breakpoint-down(md)
+		margin-right: .73rem
+		margin-left: .4rem
+		width: .8rem
+		height: .8rem
+		border: .2rem solid #f7f7fb
+		box-shadow: 0 .1rem 1.3rem rgba(239, 148, 153, 0.5)
+
 
 .btn
 	display: inline-block
 	text-align: center
-	
-	font-size: $fvw-14
+	font-size: vw(14)
 	font-weight: 700
 	letter-spacing: 0.0875vw
 	text-transform: uppercase	
-	text-shadow: 0 1px 5px rgba(210, 110, 116, 0.49)
+	text-shadow: 0 vw(1) vw(5) rgba(210, 110, 116, 0.49)
 	border-radius: 2.03125vw
 	cursor: pointer
 	background-color: #d7747a
 	background-image: linear-gradient(to top, rgba(241, 153, 157, 0.47) 0%, rgba(252, 182, 182, 0.99) 98%, #fcb6b6 100%)
-	box-shadow: 0 7px 27px rgba(241, 131, 131, 0.57)
+	box-shadow: 0 vw(7) vw(27) rgba(241, 131, 131, 0.57)
 	transition: all 0.3s;
+	+media-breakpoint-down(md)
+		font-size: .9rem
+		letter-spacing: .17rem
+		text-shadow: 0 .1rem .5rem rgba(210, 110, 116, 0.49)
+		border-radius: 4.3rem
+		box-shadow: 0 .7rem 2.7rem rgba(241, 131, 131, 0.57)
 
 .btn:hover
-	box-shadow: 0 8px 13px rgba(175, 72, 91, 0.76), inset 0 4px 1px #d7747a
+	box-shadow: 0 vw(8) vw(13) rgba(175, 72, 91, 0.76), inset 0 vw(4) vw(1) #d7747a
+	transform: rotateX(20deg)
+	+media-breakpoint-down(md)
+		box-shadow: 0 .8rem 1.3rem rgba(175, 72, 91, 0.76), inset 0 .4rem .1rem #d7747a
 
+.btn:active
+	transform: rotateX(-30deg)	
+	// transition: all .1s	
+	
 .hero__btn
 	position: relative
 	padding: 1.3020vw 7.8645vw 1.3020vw 2.1354vw
 	color: #ffffff !important
+	+media-breakpoint-down(md)
+		1.3020vw 7.8645vw 1.3020vw 2.1354vw
+
+.hero__btn:hover
+	// transform: rotateX(20deg)	
 	
 .btn-dec
 	width: 10.8854vw
 	position: absolute
 	top: 0.8604vw
 	right: -4.6875vw
+	+media-breakpoint-down(md)
+		width: 10.7rem
+		top: .85rem
+		right: -4.6rem
+
 
 .hero__content
 	position: relative
@@ -492,18 +544,22 @@ ul
 	cursor: pointer
 	transition: opacity 0.3s
 	animation: pulse 3s infinite
-
+	+media-breakpoint-down(md)
+		display: none
+		left: 41rem
+		bottom: -1.5rem
+		width: 3.8rem
+		height: 3.8rem
 
 @keyframes pulse 
 	0% 
 		box-shadow: 0px 0px 0 0px rgba(255, 96, 120, 0.4);
 	
 	70% 
-		box-shadow: 0 0 0 10px rgba(255, 96, 120, 0);
+		box-shadow: 0 0 0 vw(10) rgba(255, 96, 120, 0);
 	
 	100% 
 		box-shadow: 0 0 0 0 rgba(255, 96, 120, 0);
-
 
 .info-hint
 	opacity: 0
@@ -515,11 +571,19 @@ ul
 	width: 9.166666666666667vw
 	background-color: #fffefd
 	border-radius:  50% 50% 5% 5% / 10% 10% 5% 5% 
-	box-shadow: 0 2px 18px rgba(187, 194, 206, 0.32), 0.625vw -0.625vw 0px rgba(255, 254, 253, 0.5)
-	font-size: $fvw-14
+	box-shadow: 0 vw(2) vw(18) rgba(187, 194, 206, 0.32), 0.625vw -0.625vw 0px rgba(255, 254, 253, 0.5)
+	font-size: vw(14)
 	font-weight: 300
 	letter-spacing: 0.0875vw
 	transition: all 0.6s
+	+media-breakpoint-down(md)
+		padding: 1.58rem .14rem 1.5rem 1.4rem
+		bottom: 2.2rem
+		left: 1.7rem
+		width: 12rem
+		font-size: 1rem
+		box-shadow: 0 .2rem 1.8rem rgba(187, 194, 206, 0.32), .5rem -.5rem 0px rgba(255, 254, 253, 0.5)
+		letter-spacing: .086rem
 
 .hero__info img
 	transform: translate(4%, 7%)
@@ -537,8 +601,9 @@ ul
 	width: 	6.822916666666667vw
 	left: 50%
 	transform: translateX(-50%)
-
-	
+	+media-breakpoint-down(md)
+		bottom: 3rem
+		width: 6.8rem
 
 .heart-left
 	position: absolute
@@ -546,6 +611,10 @@ ul
 	left: 6.041666666666667vw
 	top: 16.16666666666667vw
 	z-index: 1
+	+media-breakpoint-down(md)
+		width: 19rem
+		left: 6rem
+		top: 16rem
 
 .heart-right
 	position: absolute
@@ -553,7 +622,12 @@ ul
 	height: 13.85416666666667vw
 	top: 30vw
 	right: -5vw
-	
+	+media-breakpoint-down(md)
+		width: 13rem
+		height: 13.7rem
+		top: 29.7rem
+		right: -5rem
+
 .popup
 	position: fixed
 	top: 50%
@@ -561,82 +635,101 @@ ul
 	transform: translate(-50%, -50%)
 	padding: vw(75) vw(100) 
 	width: 38.4375vw
-	// height: 34.84375vw
 	border-radius: 5%
 	background: url("../img/@2x/popup-bg.png") no-repeat
 	background-size: cover
 	z-index: 50
+	+media-breakpoint-down(md)
+		padding: 3.8rem 5.1rem
+		width: 38rem
 
 .popup__title	
 	margin-bottom: vw(23)
 	font-weight: 300
 	font-size: vw(36)
+	+media-breakpoint-down(md)
+		margin-bottom: 1.2rem
+		font-size: 1.8rem
 	span
 		font-weight: 700
-
+		
 .popup p
 	margin-bottom: vw(37)
 	font-size: vw(16)
 	font-weight: 300
 	letter-spacing: vw(0.4)
+	+media-breakpoint-down(md)
+		margin-bottom: 2rem
+		font-size: 1rem
+		letter-spacing: .021rem
 
-.popup__select, .popup input
+.select2-selection, .popup input
 	margin-bottom: vw(15)	
 	padding: vw(32) vw(46)
 	width: 100%	
+	font-weight: 300	
+	border: vw(1) solid #fbeeef
+	border-radius: vw(40)
+	+media-breakpoint-down(md)
+		margin-bottom: .8rem
+		padding: 1.6rem 2.3rem
+		font-size: 1.1rem
+		line-height: 1.3rem
+		letter-spacing: .023rem
+		border: .1rem solid #fbeeef
+		border-radius: 2rem
+
+.popup input::placeholder
+	color: #989797
+	font-weight: 300
+
+.select2-container--default .select2-selection--single .select2-selection__rendered, .popup input
 	color: #989797
 	font-weight: 300
 	font-size: vw(18)
 	line-height: vw(24)
 	letter-spacing: vw(0.45)
-	border: vw(1) solid #fbeeef
-	border-radius: vw(40)
-	&:placeholder
-		color: #989797
-		font-weight: 300	
+	+media-breakpoint-down(md)
+		font-size: 1rem
+		line-height: 1.2rem
+		letter-spacing: .023rem
+
+.select2-container--default .select2-selection--single .select2-selection__rendered
+	padding-left: 0	
 
 .popup__select
-// 	-moz-appearance: none;
-// 	-webkit-appearance: none;
 	&:focus
 		outline: none
 .select2-selection
 	&:focus
 		outline: none
 
-// .popup select option
-// 	display: inline-block
-// 	width: 50%
-// 	padding: 30px
-// 	line-height: 30px
-// 	outline: none
-
-.select2-container
-	width: 100%
-
 .select2-container--default .select2-selection--single
 	position: relative
 	display: flex
-	width: 100%
 	align-items: center
 	height: auto
 	margin-bottom: vw(15)
 	padding: vw(32) vw(46)
-	
-	
 	line-height: vw(24)
 	border: vw(1) solid #fbeeef
 	border-radius: vw(40)
-.select2-container--default .select2-selection--single .select2-selection__rendered
-	color: #989797
-	font-weight: 300
-	font-size: vw(18)
+	+media-breakpoint-down(md)
+		margin-bottom: .8rem
+		padding: 1.7rem 2.4rem
+		line-height: 1.2rem
+		border: .1rem solid #fbeeef
+		border-radius: 2rem
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple
 	border-radius: vw(40)
+	+media-breakpoint-down(md)
+		border-radius: 2rem
 
 .select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple
 	border-radius: vw(40)
+	+media-breakpoint-down(md)
+		border-radius: 2rem
 
 .select2-container--default .select2-selection--single .select2-selection__arrow
 	top: 50%
@@ -650,7 +743,10 @@ ul
 	font-size: vw(18)
 	line-height: vw(24)
 	border: none
-
+	+media-breakpoint-down(md)
+		padding: 1rem 2.3rem
+		font-size: 1rem
+		line-height: 1.2rem
 
 .submit-wrap
 	position: relative
@@ -659,11 +755,18 @@ ul
 		top: vw(15)
 		right: - vw(75)
 		width: vw(199)
+		+media-breakpoint-down(md)
+			top: .77rem
+			right: -3.81rem
+			width: 10.3rem
 
 .popup .popup__submit
 	padding: vw(28) vw(161) vw(28) vw(68)
 	text-align: left
 	letter-spacing: vw(2.16)
+	+media-breakpoint-down(md)
+		padding: 1.4rem 8.3rem 1.5rem 3.6rem
+		letter-spacing: .111rem
 
 .popup-close
 	position: absolute
@@ -672,17 +775,148 @@ ul
 	width: vw(40)
 	height: vw(40)
 	cursor: pointer
+	+media-breakpoint-down(md)
+		top: 1rem
+		right: 1rem
+		width: 4rem
+		height: 4rem
 	&:before,&:after
 		content: ""
 		top: 50%
-		left: 50%
+		left: 40%
 		display: block
 		position: absolute
 		width: vw(15)
 		height: vw(2)
 		border-radius: 50%
 		background-color: #cacacc
+		+media-breakpoint-down(md)
+			width: 0.8rem
+			height: .14rem
 	&:before
 		transform: rotate(45deg)
 	&:after
 		transform: rotate(-45deg)
+
+
+.popup-complete
+	position: fixed
+	display: flex
+	flex-direction: column
+	align-items: center
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	padding: vw(77) vw(128) vw(82) vw(128)
+	// width: vw(524)
+	min-height: vw(337)
+	border-radius: vw(50)
+	background-color: #fff
+	background:  #fff url(../img/@2x/complete-bg.png) no-repeat
+	background-size: cover
+	font-size: vw(30)
+	letter-spacing: vw(0.75)
+	z-index: 100
+	+media-breakpoint-down(md)
+		padding: 4rem 6.6rem 4.2rem 6.6rem
+		min-height: 3.37rem
+		border-radius: 2.6rem
+		font-size: 1.6rem
+		letter-spacing: .039rem
+	
+.complete-icon
+	margin-bottom: vw(26)
+	width: vw(91)	
+	height: vw(91)
+	+media-breakpoint-down(md)
+		margin-bottom: 1.34rem
+		width: 4.7rem
+		height: 4.7rem
+
+.complete__header
+	font-weight: 700
+
+.complete-text
+	font-weight: 300
+
+.complete-close
+	position: absolute
+	top: vw(40)
+	right: vw(45)
+	width: vw(40)
+	height: vw(40)
+	cursor: pointer
+	+media-breakpoint-down(md)
+		top: 1rem
+		right: 1rem
+		width: 4rem
+		height: 4rem
+	&:before,&:after
+		content: ""
+		top: 50%
+		left: 40%
+		display: block
+		position: absolute
+		width: vw(15)
+		height: vw(2)
+		border-radius: 50%
+		background-color: #cacacc
+		+media-breakpoint-down(md)
+			width: .8rem
+			height: .13rem
+	&:before
+		transform: rotate(45deg)
+	&:after
+		transform: rotate(-45deg)	
+
+.menu-toggler
+	display: none
+	position: relative
+	// position: fixed
+	// top: 3rem
+	// right: 3rem
+	justify-content: center
+	align-items: center
+	// background-color: #ffffff
+	border: none
+	outline: none
+	cursor: pointer
+	width: 4rem
+	height: 4rem
+	+media-breakpoint-down(md)
+		display: flex
+
+.menu-btn
+	position: relative
+	width: 30px
+	height: 3px
+	background-color: #8a97a1
+	transition: all 0.2s linear 0.2s
+	&::before,
+	&::after
+		content: ""
+		position: absolute
+		left: 0
+		display: block
+		width: 30px
+		height: 3px
+		background-color: #8a97a1
+	&::before
+		top: -10px
+		transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+	&::after
+		top: 10px
+		transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+  
+.menu-btn.menu-btn__active
+	background-color: transparent
+	transition: all 0.3s
+	&::before
+		top: 0
+		transform: rotate(45deg)
+		transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+	&::after
+		top: 0
+		transform: rotate(-45deg)
+		transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+
