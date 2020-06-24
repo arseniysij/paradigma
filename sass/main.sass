@@ -208,13 +208,13 @@ ul
 	
 .location-map
 	position: absolute
-	width: 21vw
-	height: 17vw	
+	width: 30vw
+	height: 26vw	
 	transform: translateX(-25%);
 	z-index: 100
 	+media-breakpoint-down(md)
-		width: 21rem
-		height: 17rem
+		width: 28rem
+		height: 24rem
 
 .phones__number
 	display: flex
@@ -365,7 +365,12 @@ ul
 .navigation
 	+media-breakpoint-down(md)
 		display: none
-
+		position: fixed
+		top: 0
+		left: 0
+		width: 100vw
+		height: 100vw
+		background-color: rgba(#fff,.5)
 
 .nav
 	position: relative
@@ -380,6 +385,9 @@ ul
 	+media-breakpoint-down(md)
 		margin: 0
 		border-radius: .5rem
+		display: flex
+		flex-direction: column
+		width: 40rem
 
 	&:before
 		content: ""
@@ -409,8 +417,8 @@ ul
 	letter-spacing: 0.0390625vw
 	transition: color 0.4s
 	+media-breakpoint-down(md)
-		padding: 2.3rem .9rem
-		font-size: 1.2rem
+		padding: 1rem .9rem
+		font-size: 1.5rem
 		letter-spacing: .075rem
 
 
@@ -885,6 +893,8 @@ ul
 	height: 4rem
 	+media-breakpoint-down(md)
 		display: flex
+	&.active
+		z-index: 10
 
 .menu-btn
 	position: relative
@@ -909,8 +919,10 @@ ul
 		transition: transform 0.2s ease-in, top 0.2s linear 0.2s
   
 .menu-btn.menu-btn__active
+	position: fixed
 	background-color: transparent
 	transition: all 0.3s
+	z-index: 100
 	&::before
 		top: 0
 		transform: rotate(45deg)

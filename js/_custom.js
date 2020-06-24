@@ -67,21 +67,22 @@ $(document).click(function(event) {
 		});
 	});
 		
-	// menu btn
-// 	document.querySelector('.menu-toggler').onclick = function() {
-//   document.querySelector('.menu-btn').classList.toggle('menu-btn__active');
+
 
 	// mob-nav
 	let menuToggler = $('.menu-toggler');
 	let menuBtn = $('.menu-btn');
 	let navigation = $('.navigation');
 	$(menuToggler).click(function() {
-		if (!menuBtn.hasClass('active')) {
-			menuBtn.addClass('active');
+		if (!menuToggler.hasClass('active')) {
+			menuToggler.addClass('active');
+			menuBtn.addClass('menu-btn__active');
 			navigation.fadeIn(300);
-		} else if (menuBtn.hasClass('active')) {
-			menuBtn.removeClass('active');
+		} else if (menuToggler.hasClass('active')) {
+			menuToggler.removeClass('active');
+			menuBtn.removeClass('menu-btn__active');
 			navigation.fadeOut(300);
+			
 		}
 	
 		
