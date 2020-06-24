@@ -77,7 +77,11 @@ $(document).click(function(event) {
 		if (!menuToggler.hasClass('active')) {
 			menuToggler.addClass('active');
 			menuBtn.addClass('menu-btn__active');
-			navigation.fadeIn(300);
+			navigation.show(300);
+			$('.nav li').hide().delay(300);
+			$('.nav li').slideDown(200);
+
+			
 		} else if (menuToggler.hasClass('active')) {
 			menuToggler.removeClass('active');
 			menuBtn.removeClass('menu-btn__active');
