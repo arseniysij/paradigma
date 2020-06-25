@@ -77,24 +77,27 @@ $(document).click(function(event) {
 		if (!menuToggler.hasClass('active')) {
 			menuToggler.addClass('active');
 			menuBtn.addClass('menu-btn__active');
-			$('body').css('overflow', 'hidden;');
+			$('body').css("overflow-y", "hidden");
 			navigation.show(300);
 			$('.nav li').hide().delay(300).slideDown();	
 		} else if (menuToggler.hasClass('active')) {
 			menuToggler.removeClass('active');
 			menuBtn.removeClass('menu-btn__active');
+			$('body').css("overflow-y", "auto");
 			navigation.fadeOut(300);
 		}
 	});
 
-	// $(window).resize(function() {
-	// 	if ($this.width() > 992 ) {
-	// 		menuToggler.removeClass('active');
-	// 		menuBtn.removeClass('menu-btn__active');
- 		
- 	// 	}
-	// });
-	// console.log(window.clientWidth());
-	// console.log($('window'.width()));
+	$(window).resize(function() {
+		if (window.innerWidth > 992 && menuToggler.hasClass('active') ) {
+			menuToggler.removeClass('active');
+			menuBtn.removeClass('menu-btn__active');
+			$('body').css("overflow-y", "auto");
+ 		}
+		 else if (window.innerWidth < 992 && !menuToggler.hasClass('active')) {
+				navigation.hide();
+			}
+	});
+	
 	
 });
