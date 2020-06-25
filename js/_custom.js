@@ -77,8 +77,9 @@ $(document).click(function(event) {
 		if (!menuToggler.hasClass('active')) {
 			menuToggler.addClass('active');
 			menuBtn.addClass('menu-btn__active');
+			$('body').css('overflow', 'hidden;');
 			navigation.show(300);
-			$('.nav li').hide().delay(300);	
+			$('.nav li').hide().delay(300).slideDown();	
 		} else if (menuToggler.hasClass('active')) {
 			menuToggler.removeClass('active');
 			menuBtn.removeClass('menu-btn__active');
@@ -93,6 +94,7 @@ $(document).click(function(event) {
  		
  	// 	}
 	// });
-
+	// console.log(window.clientWidth());
+	// console.log($('window'.width()));
 	
 });
