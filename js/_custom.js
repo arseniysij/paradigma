@@ -78,19 +78,21 @@ $(document).click(function(event) {
 			menuToggler.addClass('active');
 			menuBtn.addClass('menu-btn__active');
 			navigation.show(300);
-			$('.nav li').hide().delay(300);
-			$('.nav li').slideDown(200);
-
-			
+			$('.nav li').hide().delay(300);	
 		} else if (menuToggler.hasClass('active')) {
 			menuToggler.removeClass('active');
 			menuBtn.removeClass('menu-btn__active');
 			navigation.fadeOut(300);
-			
 		}
-	
-		
 	});
+
+	// $(window).resize(function() {
+	// 	if ($this.width() > 992 ) {
+	// 		menuToggler.removeClass('active');
+	// 		menuBtn.removeClass('menu-btn__active');
+ 		
+ 	// 	}
+	// });
 
 	
 });
