@@ -63,7 +63,7 @@ $(document).click(function(event) {
 		popup.fadeOut(400);
 		popupComplete.delay(300).fadeIn(200);
 		popupCompleteClose.click(function() {
-		popupComplete.fadeOut(200);
+			popupComplete.fadeOut(200);
 		});
 	});
 		
@@ -84,7 +84,9 @@ $(document).click(function(event) {
 			menuToggler.removeClass('active');
 			menuBtn.removeClass('menu-btn__active');
 			$('body').css("overflow-y", "auto");
-			navigation.fadeOut(300);
+			navigation.fadeOut(300).delay(300);
+				navigation.removeAttr('style');
+			
 		}
 	});
 
@@ -93,9 +95,16 @@ $(document).click(function(event) {
 			menuToggler.removeClass('active');
 			menuBtn.removeClass('menu-btn__active');
 			$('body').css("overflow-y", "auto");
- 		}
+			
+			
+ 		} else if (window.innerWidth > 992) {
+			 navigation.show();
+			 console.log("Работет");
+
+		 }
 		 else if (window.innerWidth < 992 && !menuToggler.hasClass('active')) {
 				navigation.hide();
+				
 			}
 	});
 	
